@@ -1,6 +1,10 @@
 <template>
 	<div class="main">
-		<button v-throttle="2000" @click="myClick">submit</button>
+		<!-- <button v-throttle="2000" @click="myClick">submit</button> -->
+        <div  v-copy >单击复制</div>
+        <div v-copy.dblclick >双击复制</div>
+        <div v-longpress="longClick2">长按触发</div>
+        <div v-longpress="()=>longClick('123')">长按传参</div>
 	</div>
 </template>
 
@@ -15,7 +19,13 @@
 	  methods:{
 		  myClick(){
 			  console.log('1231231')
-		  }
+		  },
+          longClick(e){
+            console.log(e)
+          },
+          longClick2(){
+            console.log('无参数')
+          }
 	  }
 	  
 	}
@@ -24,7 +34,7 @@
 <style>
 	.main{
 		margin: auto auto;
-		width: 50px;
+		width: 100px;
 		height: 10px;
 	}
 </style>

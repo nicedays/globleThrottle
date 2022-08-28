@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import "@/directive/throttle.js"
+import "@/directive/copy.js"
+import "@/directive/longpress.js"
 
 Vue.config.productionTip = false
 
