@@ -3,6 +3,7 @@ import App from './App.vue'
 import "@/directive/throttle.js"
 import "@/directive/copy.js"
 import "@/directive/longpress.js"
+import "@/directive/emoji.js"
 
 Vue.config.productionTip = false
 
