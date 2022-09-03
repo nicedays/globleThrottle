@@ -1,5 +1,4 @@
-import Vue from 'vue'
-Vue.directive('longpress', {
+export default{
     bind: function (el, binding, vNode) {
         if (typeof binding.value !== 'function' && vNode.context !== undefined) {
             let warn = `[longpress:] provided expression '${binding.expression}' is not a function, but has to be`;
@@ -41,4 +40,4 @@ Vue.directive('longpress', {
         el.addEventListener("touchend", cancel);
         el.addEventListener("touchcancel", cancel);
     }
-})
+}

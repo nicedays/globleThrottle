@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
-import "@/directive/throttle.js"
-import "@/directive/copy.js"
-import "@/directive/longpress.js"
-import "@/directive/emoji.js"
+import directive from './directive'
 
+Vue.use (directive)
 Vue.config.productionTip = false
 
 new Vue({

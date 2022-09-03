@@ -1,6 +1,5 @@
-import Vue from 'vue'
 const Doms = []
-Vue.directive('throttle', {
+export default{
     inserted(el, delay) {
         Doms.push(el) // 使用el这个dom对象
         el.addEventListener('click', () => {
@@ -16,4 +15,4 @@ Vue.directive('throttle', {
             }, delay.value || 1000); // 默认1秒
         });
     }
-});
+}

@@ -1,5 +1,6 @@
+
 import Vue from 'vue'
-Vue.directive('copy',{
+const copy={
     bind(el,clickType){
         if(clickType.modifiers.dblclick){
             el.addEventListener('dblclick', ()=>handleClick(el.innerText))
@@ -7,7 +8,7 @@ Vue.directive('copy',{
             el.addEventListener('click',()=>handleClick(el.innerText))
         }
     }
-})
+}
 
 async function handleClick(text){
     try{
@@ -17,3 +18,4 @@ async function handleClick(text){
         console.warn('复制失败',err)
     }
 }
+export default copy
