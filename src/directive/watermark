@@ -1,0 +1,16 @@
+// 水印
+export default{
+    inserted(el, text) {
+        let dom=document.createElement('div');//创建节点
+        // 设置css样式
+        dom.setAttribute('style','width:100%;transform: rotate(-45deg);top: 50%;position:absolute;opacity:0.1;')
+        let time=new Date()
+
+        dom.innerText=text.value||time.toDateString()
+        // 如果没有定位则添加定位
+        if(getComputedStyle(el,null)["position"]==="static"){
+            el.style.position='relative'
+        }
+        el.appendChild(dom)
+    }
+}

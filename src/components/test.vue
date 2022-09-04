@@ -7,10 +7,13 @@
         <div v-longpress="()=>longClick('123')">长按传参</div> -->
         <!-- <input type="text" v-emoji v-model="emoji">
         <div>{{emoji}}</div> -->
-        <div class="parent">
+        <!-- <div class="parent">
             <div class="child">
                 <img class="lazyimg" v-lazyload='url' />
             </div>
+        </div> -->
+        <div class="watermark" v-watermark="13333333" >
+
         </div>
     </div>
 </template>
@@ -44,7 +47,10 @@ export default {
     margin: auto auto;
     height: 10px;
 }
-.parent {
+.watermark{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
 }
 .lazyimg {
     height: 100px;

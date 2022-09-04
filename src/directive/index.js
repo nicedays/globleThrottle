@@ -3,6 +3,7 @@ import longpress from './longpress'
 import throttle from './throttle'
 import emoji from './emoji'
 import lazyload from './lazyload'
+import watermark from './watermark'
 
 // 自定义指令
 const directives = {
@@ -10,7 +11,8 @@ const directives = {
     longpress,
     throttle,
     emoji,
-    lazyload
+    lazyload,
+    watermark
 }
 
 export default (Vue)=>{
